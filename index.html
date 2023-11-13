@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header class="mainmenu">
+            <div id="page-home">
+                <div class="bar">|</div>
+                <h1 class="pointer">Weather Frontend Project</h1>
+            </div>
+            <i id="menu-icon" class="fa-solid fa-bars pointer"></i>
+        </header>
+        <main>
+            <form id="weather-form" action="" autocomplete="off">
+                <fieldset id="location">
+                    <label for="city">City name</label>
+                    <input type="text" name="city" id="city" autocomplete="off" placeholder="Atlanta">
+                </fieldset>
+                <fieldset id="forecast">
+                    <label for="forecast-range" id="label-forescast-range" class="pointer"></label>
+                    <input type="range" min="1", max="14" id="forecast-range" value=1 class="pointer">
+                </fieldset>
+                <input type="button" value="Search weather" id="submit" class="pointer">
+            </form>
+            <div id="container">
+                <div id="card-temperature" class="card hidden">
+                    <div class="front">
+                        <div class="related-info">
+                            <h4 id="formatted-region"></h4>
+                            <h4 id="current-time"></h4>
+                            <h4 id="last-updated"></h4>
+                        </div>
+                        <h2 id="temperature-snapshot"></h2>
+                        <h4 id="weather-type"></h4>
+                        <i id="weather-icon" class="center"></i>
+                        <h4 class="details">Hover to see the forecasts</h4>
+                    </div>
+                    <div class="back">
+                        <h4 id="forecast-city"></h4>
+                        <div id="all-forecasts"></div>
+                        <h3 class="details">Hover out to go back</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h6>Made by me</h6>
+        </footer>
+        <script type="module" defer src="main.js"></script>
+    </body>
+</html>
