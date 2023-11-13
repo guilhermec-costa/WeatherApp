@@ -4,12 +4,12 @@ import {
         sliderLegend, weatherForm, cardTemperature }
     from "./components.js";
 import { moveElement } from "./functions.js";
+import TOKEN from "./token.js";
 
-const API_KEY = "297208783199441f848131925230111"
 const BASE_URL = `http://api.weatherapi.com/v1/`;
 const method = "forecast.json"
 
-submitButton.addEventListener("click", _ => buildURL(BASE_URL, API_KEY, method));
+submitButton.addEventListener("click", _ => buildURL(BASE_URL, TOKEN, method));
 
 document.addEventListener("keydown", e => {
     if(e.key=="Escape") {
